@@ -38,6 +38,7 @@ stop(){
  is_exist
  if [ $? -eq "0" ]; then
  kill -9 $pid
+cp  ${APP_NAME%.jar*}.log  ${APP_NAME%.jar*}-1.log
 rm ${APP_NAME%.jar*}.log
  else
  echo "${APP_NAME} is not running"
